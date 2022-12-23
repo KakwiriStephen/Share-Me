@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'ShareMe',
 
-  projectId: 'q4afw5gq',
+  projectId: 'yczp74c0',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
