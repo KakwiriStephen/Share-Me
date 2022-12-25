@@ -32,5 +32,27 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: 'userId',
+      title: 'UserID',
+      type: 'string',
+    },
+    {
+      name: 'postedBy',
+      title: 'PostedBy',
+      type: 'postedBy',
+    },
+    {
+      name: 'save',
+      title: 'Save',
+      type: 'array',
+      of: [{type: 'save'}],
+    },
+    {
+      name: 'comments',
+      title: 'Comments',
+      type: 'array',
+      of: [{type: 'comment'}],
+    },
   ],
 }
