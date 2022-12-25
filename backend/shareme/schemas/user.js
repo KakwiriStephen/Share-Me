@@ -1,4 +1,4 @@
-//user Shema
+// UserSchema
 export default {
   name: 'user',
   title: 'User',
