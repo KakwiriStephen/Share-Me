@@ -32,5 +32,20 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    },
+    {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    },
+    {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    },
   ],
 }
