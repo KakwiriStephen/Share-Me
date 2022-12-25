@@ -38,14 +38,21 @@ export default {
       type: 'string',
     },
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: 'postedBy',
+      title: 'PostedBy',
+      type: 'postedBy',
     },
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: 'save',
+      title: 'Save',
+      type: 'array',
+      of: [{type: 'save'}],
+    },
+    {
+      name: 'comments',
+      title: 'Comments',
+      type: 'array',
+      of: [{type: 'comment'}],
     },
   ],
 }
