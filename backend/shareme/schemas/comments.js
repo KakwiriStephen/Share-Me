@@ -1,0 +1,3 @@
+//comments Schema
+
+export default {}
