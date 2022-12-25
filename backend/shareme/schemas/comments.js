@@ -1,3 +1,8 @@
 //comments Schema
 
-export default {}
+export default {
+  name: 'comment',
+  title: 'Comment',
+  type: 'document',
+  fields: {},
+}
