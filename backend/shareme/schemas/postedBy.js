@@ -3,6 +3,6 @@
 export default {
   name: 'postedBy',
   title: 'PostedBy',
-  type: 'refrence',
-  to: [{type: User}],
+  type: 'reference',
+  to: [{type: user}],
 }
