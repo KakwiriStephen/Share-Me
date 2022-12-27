@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
 function login() {
-  return <div>login</div>;
+  return <div>login Login </div>;
 }
 
 export default login;
