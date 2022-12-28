@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 
 import shareVideo from "../assets/share.mp4";
 import logo from "../assets/logowhite.png";
+//
 
 const Login = () => {
   return (
@@ -18,7 +19,8 @@ const Login = () => {
           muted
           autoplay
           className="w-full h-full object-cover"
-        />
+        ></video>
+
         <div className="absolute flex flex-col justify-center items-center top-0 left-0 bottom-0 bg-blackOverlay"></div>
       </div>
     </div>
