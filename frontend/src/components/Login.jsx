@@ -25,6 +25,10 @@ const Login = () => {
           <div className="P-5">
             <img src={logo} width="130px" alt="logo" />
           </div>
+
+          <div className="shadow-2xl">
+            <GoogleLogin clientId="" />
+          </div>
         </div>
       </div>
     </div>
