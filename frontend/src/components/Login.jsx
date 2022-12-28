@@ -6,8 +6,22 @@ import { FcGoogle } from "react-icons/fc";
 import shareVideo from "../assets/share.mp4";
 import logo from "../assets/logowhite.png";
 
-function login() {
-  return <div>login</div>;
-}
+const Login = () => {
+  return (
+    <div className="flex justify-start items-center flex-col h-screen">
+      <div className="relative w-full h-full">
+        <video
+          src={shareVideo}
+          type="video/mp4"
+          loop
+          controls={false}
+          muted
+          autoplay
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  );
+};
 
-export default login;
+export default Login;
