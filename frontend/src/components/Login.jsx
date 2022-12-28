@@ -32,7 +32,7 @@ const Login = () => {
               render={(renderProps) => (
                 <button
                   type="button"
-                  className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none"
+                  className="bg-mainColor flex justify-center items-center  p-4 rounded-lg cursor-pointer outline-none"
                 >
                   <FcGoogle className="mr-4" /> Sign In With Google
                 </button>
