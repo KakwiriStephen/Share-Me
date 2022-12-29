@@ -22,7 +22,7 @@ const Login = () => {
         ></video>
 
         <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0 bg-blackOverlay">
-          <div className="P-5">
+          <div className="mb-4 P-5">
             <img src={logo} width="130px" alt="logo" />
           </div>
 
@@ -34,7 +34,7 @@ const Login = () => {
                   type="button"
                   className="bg-mainColor flex justify-center items-center  p-4 rounded-lg cursor-pointer outline-none"
                 >
-                  <FcGoogle className="mr-4" /> Sign In With Google
+                  <FcGoogle className=" mt-4" /> Sign In With Google
                 </button>
               )}
             />
