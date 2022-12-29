@@ -33,10 +33,14 @@ const Login = () => {
                 <button
                   type="button"
                   className="bg-mainColor flex justify-center items-center  p-4 rounded-lg cursor-pointer outline-none"
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
                 >
                   <FcGoogle className=" mt-4" /> Sign In With Google
                 </button>
               )}
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
             />
           </div>
         </div>
