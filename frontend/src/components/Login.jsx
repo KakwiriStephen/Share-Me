@@ -8,6 +8,8 @@ import logo from "../assets/logowhite.png";
 //
 
 const Login = () => {
+  const responseGoogle = (response) => {};
+
   return (
     <div className="flex justify-start items-center flex-col h-screen">
       <div className="relative w-full h-full">
