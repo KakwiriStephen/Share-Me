@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 
 import shareVideo from "../assets/share.mp4";
 import logo from "../assets/logowhite.png";
-
+// login componet
 const Login = () => {
   const responseGoogle = (response) => {};
 
