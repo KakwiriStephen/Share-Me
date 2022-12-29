@@ -8,6 +8,8 @@ import logo from "../assets/logowhite.png";
 //
 
 const Login = () => {
+  const responseGoogle = (response) => {};
+
   return (
     <div className="flex justify-start items-center flex-col h-screen">
       <div className="relative w-full h-full">
@@ -33,10 +35,14 @@ const Login = () => {
                 <button
                   type="button"
                   className="bg-mainColor flex justify-center items-center  p-4 rounded-lg cursor-pointer outline-none"
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
                 >
                   <FcGoogle className=" mt-4" /> Sign In With Google
                 </button>
               )}
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
             />
           </div>
         </div>
