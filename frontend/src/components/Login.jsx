@@ -7,7 +7,10 @@ import shareVideo from "../assets/share.mp4";
 import logo from "../assets/logowhite.png";
 
 const Login = () => {
-  const responseGoogle = (response) => {};
+  const responseGoogle = (response) => {
+    localStorage.setItem("user", JSON.stringify(response.profileObj));
+    const { name, googleId, imageUrl } = response.profileObj;
+  };
 
   return (
     <div className="flex justify-start items-center flex-col h-screen">
