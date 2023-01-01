@@ -33,7 +33,7 @@ const Login = () => {
           loop
           controls={false}
           muted
-          autoplay
+          autoPlay
           className="w-full h-full object-cover"
         ></video>
 
