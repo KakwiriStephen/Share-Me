@@ -1,4 +1,6 @@
 import React from "react";
+import { gapi } from "gapi-script";
+import { useEffect } from "react";
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
@@ -8,6 +10,15 @@ import logo from "../assets/logowhite.png";
 import { client } from "../client";
 
 const Login = () => {
+  useEffect(() => {
+    const initClient = () => {
+      gapi.client.init({
+        // clientId: clientId,
+        // scope: "",
+      });
+    };
+    gapi.load("client:auth2", initClient);
+  });
   const navigate = useNavigate();
   const responseGoogle = (response) => {
     localStorage.setItem("user", JSON.stringify(response.profileObj));
