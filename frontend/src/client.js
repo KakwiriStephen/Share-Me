@@ -7,5 +7,5 @@ export const client = sanityClient({
   dataset: "production",
   apiVersion: 2021 - 11 - 16,
   useCdn: true,
-  token: process.env.REACT_APP_SANity_TOKEN,
+  token: process.env.REACT_APP_SANITY_TOKEN,
 });
