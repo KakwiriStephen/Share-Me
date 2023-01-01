@@ -10,6 +10,15 @@ import logo from "../assets/logowhite.png";
 import { client } from "../client";
 
 const Login = () => {
+  useEffect(() => {
+    const initClient = () => {
+      gapi.client.init({
+        // clientId: clientId,
+        // scope: "",
+      });
+    };
+    gapi.load("client:auth2", initClient);
+  });
   const navigate = useNavigate();
   const responseGoogle = (response) => {
     localStorage.setItem("user", JSON.stringify(response.profileObj));
