@@ -11,15 +11,3 @@ createRoot(root).render(
   </Router>,
   document.getElementById("root")
 );
-// import { createRoot } from "react-dom";
-
-// function App() {
-//   return (
-//     <div>
-//       <h1>Hello World!</h1>
-//     </div>
-//   );
-// }
-
-// const root = document.getElementById('root');
-// createRoot(root).render(<App />);
