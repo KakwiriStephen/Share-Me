@@ -12,10 +12,7 @@ import { client } from "../client";
 const Login = () => {
   useEffect(() => {
     const initClient = () => {
-      gapi.client.init({
-        // clientId: clientId,
-        // scope:"",
-      });
+      gapi.client.init({});
     };
     gapi.load("client:auth2", initClient);
   });
