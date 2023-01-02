@@ -14,7 +14,7 @@ const Login = () => {
     const initClient = () => {
       gapi.client.init({
         // clientId: clientId,
-        // scope: "",
+        // scope:"",
       });
     };
     gapi.load("client:auth2", initClient);
