@@ -9,6 +9,7 @@ import shareVideo from "../assets/share.mp4";
 import logo from "../assets/logowhite.png";
 import { client } from "../client";
 
+//Login component
 const Login = () => {
   useEffect(() => {
     const initClient = () => {
