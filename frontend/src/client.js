@@ -9,4 +9,6 @@ export const client = sanityClient({
   ignoreBrowserTokenWarning: true,
   token: process.env.REACT_APP_SANITY_TOKEN,
 });
-//connectin  DB
+
+const builder = imageUrlBuilder(client);
+export const urlFor = (source) => builder.image.source;
