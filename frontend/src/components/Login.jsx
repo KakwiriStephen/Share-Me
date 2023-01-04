@@ -1,7 +1,7 @@
 import React from "react";
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
-import GoogleLogin from "react-google-login";
+import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import shareVideo from "../assets/share.mp4";
