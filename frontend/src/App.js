@@ -9,7 +9,6 @@ import Home from "./container/Home";
 const App = () => {
   return (
     <GoogleOAuthProvider clientId="">
-      ;
       <Routes>
         <Route path="login" element={<Login />} />
         <Route path="/*" element={<Home />} />
