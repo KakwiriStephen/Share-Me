@@ -46,7 +46,7 @@ const Login = () => {
         ></video>
 
         <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0 bg-blackOverlay">
-          <div className="mb-4 P-5">
+          <div className="mb-4">
             <img src={logo} width="130px" alt="logo" />
           </div>
 
@@ -60,7 +60,7 @@ const Login = () => {
                   onClick={renderProps.onClick}
                   disabled={renderProps.disabled}
                 >
-                  <FcGoogle className=" mt-4" /> Sign In With Google
+                  <FcGoogle /> Sign In With Google
                 </button>
               )}
               onSuccess={responseGoogle}
