@@ -1,8 +1,10 @@
 import React from "react";
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
-import GoogleLogin from "react-google-login";
+import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+
 import { FcGoogle } from "react-icons/fc";
 import shareVideo from "../assets/share.mp4";
 import logo from "../assets/logowhite.png";
@@ -19,8 +21,8 @@ const Login = () => {
   const navigate = useNavigate();
   const responseGoogle = (response) => {
     localStorage.setItem("user", JSON.stringify(response.profileObj));
-    const { name, googleId, imageUrl } = response.profileObj;
-
+    var decodedHeader = jwt_decode(response.credential);
+    const { name, googleId, imageUrl } = decodedHeader;
     const doc = {
       _id: googleId,
       _type: "user",
