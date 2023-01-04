@@ -9,3 +9,4 @@ export const client = sanityClient({
   ignoreBrowserTokenWarning: true,
   token: process.env.REACT_APP_SANITY_TOKEN,
 });
+//connectin  DB
