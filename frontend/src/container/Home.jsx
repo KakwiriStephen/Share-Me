@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { Link, Route, Routes } from "react-router-dom";
+import { userQuery } from "../utlis/data";
 
 import { Sidebar, UserProfile } from "../components";
 import Pins from "./Pins";
@@ -16,7 +17,9 @@ const Home = () => {
       ? JSON.parse(localStorage.getItem("user"))
       : localStorage.clear();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const query = userQuery(userInfo?.sub);
+  }, []);
 
   return (
     <div className="flex bg-gray-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out">
