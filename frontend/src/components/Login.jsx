@@ -22,14 +22,16 @@ const Login = () => {
   const responseGoogle = (response) => {
     localStorage.setItem("user", JSON.stringify(response.profileObj));
     var decodedHeader = jwt_decode(response.credential);
-    console.log(decodedHeader);
-    const { name, sub, picture } = decodedHeader;
+    // console.log(decodedHeader);
+
+    const { name, aud, picture } = decodedHeader;
     const doc = {
-      _id: sub,
+      _id: aud,
       _type: "user",
       userName: name,
       image: picture,
     };
+    console.log(doc);
     client.createIfNotExists(doc).then(() => {
       navigate("/", { replace: true });
     });
