@@ -11,6 +11,7 @@ import logo from "../assets/logo.png";
 
 const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
+  const [user, setUser] = useState(null);
 
   const userInfo =
     localStorage.getItem("user") !== "undefined"
@@ -19,6 +20,10 @@ const Home = () => {
 
   useEffect(() => {
     const query = userQuery(userInfo?.sub);
+
+    client.fetch(query).then((data) => {
+      setUser(data[0]);
+    });
   }, []);
 
   return (
@@ -35,7 +40,9 @@ const Home = () => {
         <Link to="/">
           <img src={logo} alt="logo" className="w-28" />
         </Link>
-        <Link to={`user-profile/${user?._id}`}></Link>
+        <Link to={`user-profile/${user?._id}`}>
+          <img src={user?.image} alt="pic" className="w-28" />
+        </Link>
       </div>
     </div>
   );
