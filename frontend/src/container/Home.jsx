@@ -13,16 +13,20 @@ const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [user, setUser] = useState(null);
 
-  const userInfo =
-    localStorage.getItem("user") !== "undefined"
-      ? JSON.parse(localStorage.getItem("user"))
-      : localStorage.clear();
+  // const userInfo =
+  //   localStorage.getItem("user") !== "undefined"
+  //     ? JSON.parse(localStorage.getItem("user"))
+  //     : localStorage.clear();
+  let userInfo = localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : null;
 
   useEffect(() => {
-    const query = userQuery(userInfo?.sub);
+    const query = userQuery(userInfo);
     client.fetch(query).then((data) => {
       setUser(data[0]);
     });
+    console.log(userInfo);
   }, []);
 
   return (
