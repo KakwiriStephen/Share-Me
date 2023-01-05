@@ -13,15 +13,15 @@ const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
   const [user, setUser] = useState(null);
 
-  const userInfo =
-    localStorage.getItem("user") !== "undefined"
-      ? JSON.parse(localStorage.getItem("user"))
-      : localStorage.clear();
+  let userInfo = localStorage.getItem("user")
+    ? JSON.parse(localStorage.getItem("user"))
+    : null;
 
   useEffect(() => {
-    const query = userQuery(userInfo?.sub);
+    const query = userQuery(userInfo?._id);
     client.fetch(query).then((data) => {
       setUser(data[0]);
+      console.log(data);
     });
   }, []);
 
@@ -40,7 +40,7 @@ const Home = () => {
           <img src={logo} alt="logo" className="w-28" />
         </Link>
         <Link to={`user-profile/${user?._id}`}>
-          <img src={user?.image} alt="" className="w-28" />
+          <img src={user?.image} alt="l" className="w-28" />
         </Link>
       </div>
     </div>

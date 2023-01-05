@@ -13,11 +13,15 @@ import { client } from "../client";
 //login component
 const Login = () => {
   useEffect(() => {
-    const initClient = () => {
-      gapi.client.init({});
+    const start = () => {
+      gapi.client.init({
+        clientId: `${process.env.REACT_APP_GOOGLE_API_TOKEN}`,
+        scope: "email",
+      });
     };
-    gapi.load("client:auth2", initClient);
-  });
+
+    gapi.load("client:auth2", start);
+  }, []);
   const navigate = useNavigate();
   const responseGoogle = (response) => {
     localStorage.setItem("user", JSON.stringify(response.profileObj));
