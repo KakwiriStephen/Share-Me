@@ -69,7 +69,7 @@ const Sidebar = ({ user, closeToggle }) => {
           className="flex my-5 mb-3 gap-2 items-center bg-white rounded-lg shadow-lg mx-3"
           onClick={handleCloseSidebar}
         >
-          <img src={user.image} className="w-10 h-10" alt="User" />
+          <img src={user.image} className="w-10 h-10 rounded-full" alt="User" />
           <p>{user.userName}</p>
         </Link>
       )}
