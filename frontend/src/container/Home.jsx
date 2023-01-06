@@ -34,7 +34,7 @@ const Home = () => {
         <HiMenu
           fontSize={40}
           className="cursor-pointer"
-          onClick={() => setToggleSidebar(false)}
+          onClick={() => setToggleSidebar(true)}
         />
         <Link to="/">
           <img src={logo} alt="logo" className="w-28" />
