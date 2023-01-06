@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { HiMenu } from "react-icons/hi";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { Link, Route, Routes } from "react-router-dom";
-import { userQuery } from "../utilis/data";
+import { userQuery } from "../utils/data";
 
 import { Sidebar, UserProfile } from "../components";
 import Pins from "./Pins";
@@ -43,6 +43,17 @@ const Home = () => {
           <img src={user?.image} alt="l" className="w-28" />
         </Link>
       </div>
+      {toggleSidebar && (
+        <div className="fixed w-4/5 bg-white h-screen overflow-y-auto shadow-md z-10 animate-slide-in">
+          <div className="absolute w-full flex justify-end items-center p-2">
+            <AiFillCloseCircle
+              fontSize={30}
+              className="cursor-pointer"
+              onClick={() => setToggleSidebar(false)}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
