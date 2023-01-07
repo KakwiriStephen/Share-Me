@@ -1,7 +1,6 @@
 import React from "react";
-// import Loader from "react-loader-spinner";
+
 import { Rings } from "react-loader-spinner";
-// import * as Loader from "react-loader-spinner";
 
 const Spinner = ({ message }) => {
   return (
