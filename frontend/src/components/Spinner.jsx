@@ -1,6 +1,7 @@
 import React from "react";
+import Loader from "react-loader-spinner";
 
-const Spinner = () => {
+const Spinner = ({ message }) => {
   return <div>Spinner</div>;
 };
 
