@@ -11,6 +11,8 @@ const Feed = () => {
   const [loading, setLoading] = useState(false);
   const { categoryId } = useParams;
 
+  const [pins, setpins] = useState(null);
+
   useEffect(() => {
     setLoading(true);
 
@@ -18,7 +20,8 @@ const Feed = () => {
       const query = searchQuery(categoryId);
 
       client.fetch(query).then((data) => {
-        setPins(data);
+        setpins(data);
+        setLoading(false);
       });
     } else {
     }
