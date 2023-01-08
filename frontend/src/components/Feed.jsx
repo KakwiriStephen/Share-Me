@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { searchQuery } from "../utils/data";
 
 import { client } from "../client";
 import MasonryLayout from "./MasonryLayout";
@@ -14,6 +15,11 @@ const Feed = () => {
     setLoading(true);
 
     if (categoryId) {
+      const query = searchQuery(categoryId);
+
+      client.fetch(query).then((data) => {
+        setPins(data);
+      });
     } else {
     }
   }, [categoryId]);
