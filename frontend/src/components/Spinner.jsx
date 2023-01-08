@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Rings } from "react-loader-spinner";
 
 const Spinner = ({ message }) => {
