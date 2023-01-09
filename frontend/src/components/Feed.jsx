@@ -9,7 +9,7 @@ import Spinner from "./Spinner";
 
 const Feed = () => {
   const [loading, setLoading] = useState(false);
-  const { categoryId } = useParams;
+  const { categoryId } = useParams();
   console.log(categoryId);
 
   const [pins, setPins] = useState();
@@ -19,16 +19,17 @@ const Feed = () => {
       setLoading(true);
 
       const query = searchQuery(categoryId);
-      client.fetch(query).then((data) => {
-        setPins(data);
+      client.fetch(query).then((response) => {
+        setPins(response);
         setLoading(false);
       });
     } else {
       setLoading(true);
 
-      client.fetch(feedQuery).then((data) => {
-        setPins(data);
+      client.fetch(feedQuery).then((response) => {
+        setPins(response);
         setLoading(false);
+        console.log(response);
       });
     }
   }, [categoryId]);
