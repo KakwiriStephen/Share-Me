@@ -80,6 +80,7 @@ const Pin = ({ pin }) => {
           >
             <div className="flex items-center justify-between">
               <div className="flex gap-2">
+                {/* Download */}
                 <a
                   href={`${image?.asset?.url}?dl=`}
                   download
