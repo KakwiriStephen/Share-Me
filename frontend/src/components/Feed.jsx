@@ -1,17 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { client } from "../client";
 import { searchQuery, feedQuery } from "../utils/data";
 
-import { client } from "../client";
 import MasonryLayout from "./MasonryLayout";
 import Spinner from "./Spinner";
 
 const Feed = () => {
+  const [pins, setPins] = useState();
   const [loading, setLoading] = useState(false);
   const { categoryId } = useParams();
-
-  const [pins, setPins] = useState();
 
   useEffect(() => {
     if (categoryId) {
@@ -21,7 +20,6 @@ const Feed = () => {
       client.fetch(query).then((data) => {
         setPins(data);
         setLoading(false);
-        console.log(data);
       });
     } else {
       setLoading(true);
@@ -29,6 +27,7 @@ const Feed = () => {
       client.fetch(feedQuery).then((data) => {
         setPins(data);
         setLoading(false);
+        console.log(data);
       });
     }
   }, [categoryId]);
