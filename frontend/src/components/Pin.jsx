@@ -27,7 +27,7 @@ const Pin = ({ pin }) => {
   };
 
   let alreadySaved = pin?.save?.filter(
-    (item) => item?.postedBy?._id === user?.googleId
+    (item) => item?.postedBy?._id === user?.sub
   );
 
   alreadySaved = alreadySaved?.length > 0 ? alreadySaved : [];
