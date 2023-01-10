@@ -15,10 +15,13 @@ const Pin = ({ pin }) => {
 
   const { postedBy, image, _id, destination } = pin;
 
+  // let user = JSON.parse(localStorage.getItem("user") || null);
+
   const user =
     localStorage.getItem("user") !== "undefined"
       ? JSON.parse(localStorage.getItem("user"))
       : localStorage.clear();
+  console.log(user);
 
   const deletePin = (id) => {
     client.delete(id).then(() => {
@@ -42,10 +45,10 @@ const Pin = ({ pin }) => {
         .insert("after", "save[-1]", [
           {
             _key: uuidv4(),
-            userId: user?.googleId,
+            userId: user?.sub,
             postedBy: {
               _type: "postedBy",
-              _ref: user?.googleId,
+              _ref: user?.sub,
             },
           },
         ])
@@ -125,7 +128,7 @@ const Pin = ({ pin }) => {
                   {destination?.slice(8, 17)}...
                 </a>
               ) : undefined}
-              {postedBy?._id === user?.googleId && (
+              {postedBy?._id === user?.sub && (
                 <button
                   type="button"
                   onClick={(e) => {
